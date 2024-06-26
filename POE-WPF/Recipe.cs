@@ -12,6 +12,8 @@ namespace POE_WPF
         public List<Ingredient> Ingredients { get; set; }
         public List<Steps> Steps { get; set; }
 
+        public double TotalCalories { get; set; }
+
         public Recipe(string name)
         {
             Name = name;

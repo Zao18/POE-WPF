@@ -35,7 +35,7 @@ namespace POE_WPF
             recipes = recipes.OrderBy(r => r.Name).ToList();
             foreach (var recipe in recipes)
             {
-                cbDisplay.Items.Add(recipe.Name);
+                cbDisplay.Items.Add($"{recipe.Name} Calories: {recipe.TotalCalories}");
             }
         }
 
