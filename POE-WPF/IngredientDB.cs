@@ -7,7 +7,7 @@ using static POE_WPF.Ingredient;
 
 namespace POE_WPF
 {
-    internal class IngredientDB
+    public class IngredientDB
     {
             //Stores the lists of ingredients
             private SortedList<string, Ingredient> ingredientList = new SortedList<string, Ingredient>();

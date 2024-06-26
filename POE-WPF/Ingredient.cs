@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace POE_WPF
 {
-    internal class Ingredient
+    public class Ingredient
     {
             public string Name { get; set; }
             public double Quantity { get; set; }

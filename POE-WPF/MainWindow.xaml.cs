@@ -16,9 +16,21 @@ namespace POE_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        public IngredientDB ingredientDB = new IngredientDB();
+        public RecipeDB recipeDB = new RecipeDB();
+        public int numOfIngredients;
+        public int numOfSteps;
+        public int count = 1;
+        public double totalCalories = 0;
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new Page1(this));
+        }
+
+        public void NavigateTo(Page page)
+        {
+            MainFrame.Navigate(page);
         }
     }
 }
