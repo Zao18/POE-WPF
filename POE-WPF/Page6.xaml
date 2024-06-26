@@ -9,9 +9,13 @@
       Title="Page6">
 
     <Grid>
-        <ComboBox Name="cbDisplay" HorizontalAlignment="Left" VerticalAlignment="Top" Width="285" Margin="10,10,0,0" Height="50"/>
-        <TextBox Name="txtDisplay" HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="400" Margin="312,44,0,0"/>
-        <Button Name="btnBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="241" Margin="54,370,0,0" Click="btnBack_Click" Height="58"/>
-        <Button Name="btnDisplayRecipe" Content="Display Recipe" HorizontalAlignment="Left" VerticalAlignment="Top" Width="246" Margin="312,370,0,0" Click="btnDisplayRecipe_Click" Height="58"/>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <ComboBox Name="cbDisplay" HorizontalAlignment="Left" VerticalAlignment="Top" Width="285" Margin="65,38,0,0" Height="66"/>
+        <TextBox Name="txtDisplay" HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="400" Margin="367,38,0,0"/>
+        <Button Name="btnBack" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top" Width="241" Margin="154,373,0,0" Click="btnBack_Click" Height="58"/>
+        <Button Name="btnDisplayRecipe" Content="Display Recipe" HorizontalAlignment="Left" VerticalAlignment="Top" Width="246" Margin="412,373,0,0" Click="btnDisplayRecipe_Click" Height="58"/>
     </Grid>
 </Page>

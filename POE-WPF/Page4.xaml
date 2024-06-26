@@ -9,8 +9,18 @@
       Title="Page4">
 
     <Grid>
-            <TextBox Name="txtDescription" Width="200" Margin="300,31,300,156"/>
-            <Button Content="Submit" Click="btnSubmit4_Click" Width="100" Margin="350,340,350,65"/>
-        <Label Content="Step Description:" HorizontalAlignment="Left" Margin="183,145,0,0" VerticalAlignment="Top"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="19*"/>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="737*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <TextBox Name="txtDescription" Margin="237,31,261,115" Grid.Column="2"/>
+        <Button Content="Submit" Click="btnSubmit4_Click" Margin="289,356,313,18" Grid.Column="2"/>
+        <Label Content="Step Description:" HorizontalAlignment="Left" Margin="120,145,0,0" VerticalAlignment="Top" Height="26" Width="100" Grid.Column="2"/>
+        <Grid Grid.Column="2"/>
     </Grid>
 </Page>

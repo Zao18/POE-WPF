@@ -55,6 +55,12 @@ namespace POE_WPF
 
             Recipe selectedRecipe = mainWindow.recipeDB.GetRecipe(name);
 
+            if (selectedRecipe == null)
+            {
+                MessageBox.Show("Recipe not found.");
+                return;
+            }
+
             string recipeText = "Recipe:\r\n";
 
             recipeText += "Ingredients:\r\n";

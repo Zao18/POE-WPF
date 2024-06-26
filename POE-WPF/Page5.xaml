@@ -9,12 +9,16 @@
       Title="Page5">
 
     <Grid>
-        <TextBox x:Name="txtDisplay" IsReadOnly="True" Margin="237,10,237,192"/>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="txtDisplay" IsReadOnly="True" Margin="237,10,237,183"/>
         <Button x:Name="btnHalf" Content="Half" HorizontalAlignment="Left" Margin="63,272,0,0" VerticalAlignment="Top" Height="81" Width="144" Click="btnHalf_Click"/>
         <Button x:Name="btnDouble" Content="Double" HorizontalAlignment="Center" Margin="0,272,0,0" VerticalAlignment="Top" Height="81" Width="144" Click="btnDouble_Click"/>
         <Button x:Name="btnTriple" Content="Triple" HorizontalAlignment="Left" Margin="612,272,0,0" VerticalAlignment="Top" Height="81" Width="144" Click="btnTriple_Click"/>
         <Button x:Name="btnReset" Content="Reset" HorizontalAlignment="Left" Margin="63,359,0,0" VerticalAlignment="Top" Height="81" Width="144" Click="btnReset_Click"/>
-        <Button x:Name="btnRestart" Content="Restart" HorizontalAlignment="Center" Margin="0,359,0,0" VerticalAlignment="Top" Height="81" Width="144" Click="btnRestart_Click"/>
+        <Button x:Name="btnRestart" Content="Add New Recipe" HorizontalAlignment="Center" Margin="0,359,0,0" VerticalAlignment="Top" Height="81" Width="144" Click="btnRestart_Click"/>
         <Button x:Name="btnViewRecipes" Content="View Resipes" HorizontalAlignment="Left" Margin="612,359,0,0" VerticalAlignment="Top" Height="81" Width="144" Click="btnViewRecipes_Click"/>
     </Grid>
 </Page>

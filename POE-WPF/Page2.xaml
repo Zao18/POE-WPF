@@ -10,16 +10,25 @@
 
     <Grid>
 
-        <TextBox Name="txtName" Margin="300,8,184,386"/>
-        <TextBox Name="txtQuantity" Margin="300,70,184,329"/>
-        <TextBox Name="txtUnit" Margin="300,127,184,271"/>
-        <TextBox Name="txtCalories" Margin="300,188,184,203"/>
-        <ComboBox Name="cbFoodGroup" Margin="300,252,184,130"/>
-        <Button Name="btnSubmit2" Content="Submit" Click="btnSubmit2_Click" Width="100" Margin="350,334,350,35"/>
-        <Label Content="Name of Ingredient:" HorizontalAlignment="Left" Margin="179,18,0,0" VerticalAlignment="Top"/>
-        <Label Content="Quantity of Ingredient:" HorizontalAlignment="Left" Margin="167,62,0,0" VerticalAlignment="Top"/>
-        <Label Content="Unit of Mesurement:" HorizontalAlignment="Left" Margin="168,112,0,0" VerticalAlignment="Top"/>
-        <Label Content="Number of Calories:" HorizontalAlignment="Left" Margin="171,162,0,0" VerticalAlignment="Top"/>
-        <Label Content="Food Group:" HorizontalAlignment="Left" Margin="202,206,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="txtName" Margin="300,12,184,370" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform AngleX="-0.905"/>
+                    <RotateTransform/>
+                    <TranslateTransform X="-0.442"/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox Name="txtQuantity" Margin="300,83,184,299"/>
+        <TextBox Name="txtUnit" Margin="300,155,184,227"/>
+        <TextBox Name="txtCalories" Margin="300,226,184,156"/>
+        <ComboBox Name="cbFoodGroup" Margin="300,298,184,84"/>
+        <Button Name="btnSubmit2" Content="Submit" Click="btnSubmit2_Click" Margin="377,377,261,3"/>
+        <Label Content="Name of Ingredient:" HorizontalAlignment="Left" Margin="144,29,0,0" VerticalAlignment="Top"/>
+        <Label Content="Quantity of Ingredient:" HorizontalAlignment="Left" Margin="137,104,0,0" VerticalAlignment="Top"/>
+        <Label Content="Unit of Mesurement:" HorizontalAlignment="Left" Margin="148,176,0,0" VerticalAlignment="Top"/>
+        <Label Content="Number of Calories:" HorizontalAlignment="Left" Margin="152,247,0,0" VerticalAlignment="Top"/>
+        <Label Content="Food Group:" HorizontalAlignment="Left" Margin="191,314,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>
