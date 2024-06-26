@@ -30,13 +30,15 @@ namespace POE_WPF
 
         private void PopulateComboBox()
         {
-            cbFoodGroup.Items.Add(new ComboBoxItem { Content = "Fruits" });
-            cbFoodGroup.Items.Add(new ComboBoxItem { Content = "Vegetables" });
-            cbFoodGroup.Items.Add(new ComboBoxItem { Content = "Grains" });
-            cbFoodGroup.Items.Add(new ComboBoxItem { Content = "Protein" });
-            cbFoodGroup.Items.Add(new ComboBoxItem { Content = "Dairy" });
+            cbFoodGroup.Items.Add(new ComboBoxItem { Content = "Starchy foods" });
+            cbFoodGroup.Items.Add(new ComboBoxItem { Content = "Vegetables and fruits" });
+            cbFoodGroup.Items.Add(new ComboBoxItem { Content = "Dry beans, peas, lentils and soya" });
+            cbFoodGroup.Items.Add(new ComboBoxItem { Content = "Chicken, fish, meat and eggs" });
+            cbFoodGroup.Items.Add(new ComboBoxItem { Content = "Milk and dairy products" });
+            cbFoodGroup.Items.Add(new ComboBoxItem { Content = "Fats and oil" });
+            cbFoodGroup.Items.Add(new ComboBoxItem { Content = "Water" });
 
-            cbFoodGroup.SelectedIndex = 0; // Set default selected item if needed
+            cbFoodGroup.SelectedIndex = 0;
         }
 
         private void btnSubmit2_Click(object sender, RoutedEventArgs e)

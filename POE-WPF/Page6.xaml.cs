@@ -25,11 +25,60 @@ namespace POE_WPF
         {
             InitializeComponent();
             this.mainWindow = mainWindow;
+            PopulateComboBox();
+        }
+
+        private void PopulateComboBox()
+        {
+            cbDisplay.Items.Clear();
+            List<Recipe> recipes = mainWindow.recipeDB.GetAllRecipes();
+            recipes = recipes.OrderBy(r => r.Name).ToList();
+            foreach (var recipe in recipes)
+            {
+                cbDisplay.Items.Add(recipe.Name);
+            }
         }
 
         private void btnBack_Click(object sender, RoutedEventArgs e)
         {
+            mainWindow.NavigateTo(new Page5(mainWindow));
+        }
 
+        private void btnDisplayRecipe_Click(object sender, RoutedEventArgs e)
+        {
+            string name = cbDisplay.SelectedItem?.ToString();
+            if (string.IsNullOrEmpty(name))
+            {
+                MessageBox.Show("Please select a recipe from the dropdown menu.");
+                return;
+            }
+
+            Recipe selectedRecipe = mainWindow.recipeDB.GetRecipe(name);
+
+            string recipeText = "Recipe:\r\n";
+
+            recipeText += "Ingredients:\r\n";
+            foreach (var ingredient in selectedRecipe.Ingredients)
+            {
+                if (ingredient.Quantity == 16 && ingredient.Unit == "teaspoons")
+                {
+                    recipeText += $"1 cup of {ingredient.Name}\r\n";
+                }
+                else
+                {
+                    recipeText += $"{ingredient.Quantity} {ingredient.Unit} of {ingredient.Name} with {ingredient.Calories} calories and is a {ingredient.FoodGroup} product\r\n";
+                }
+            }
+
+            recipeText += "\r\nSteps:\r\n";
+            int stepCount = 1;
+            foreach (var step in selectedRecipe.Steps)
+            {
+                recipeText += $"Step {stepCount}:\n {step.Step}\r\n";
+                stepCount++;
+            }
+
+            txtDisplay.Text = recipeText;
         }
     }
 }

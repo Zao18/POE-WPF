@@ -205,6 +205,6 @@ namespace POE_WPF
         private void btnViewRecipes_Click(object sender, RoutedEventArgs e)
         {
             mainWindow.NavigateTo(new Page6(mainWindow));
+            }
         }
     }
-}
