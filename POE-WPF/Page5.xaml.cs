@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace POE_WPF
 {
-    /// <summary>
-    /// Interaction logic for Page5.xaml
-    /// </summary>
     public partial class Page5 : Page
     {
         private MainWindow mainWindow;
@@ -83,7 +80,6 @@ namespace POE_WPF
 
             recipeText += "\r\nSteps:\r\n";
 
-            // Get all steps from ingredientDB in mainWindow
             List<Steps> steps = mainWindow.ingredientDB.GetAllSteps();
 
             int stepNumber = 1;
@@ -100,7 +96,6 @@ namespace POE_WPF
         {
             string recipeText = "Recipe:\r\nIngredients:\r\n";
 
-            // Get all ingredients from ingredientDB in mainWindow
             List<Ingredient> ingredients = mainWindow.ingredientDB.GetAllIngredients();
 
             foreach (Ingredient ingredient in ingredients)
@@ -117,7 +112,6 @@ namespace POE_WPF
 
             recipeText += "\r\nSteps:\r\n";
 
-            // Get all steps from ingredientDB in mainWindow
             List<Steps> steps = mainWindow.ingredientDB.GetAllSteps();
 
             int stepNumber = 1;
@@ -134,7 +128,6 @@ namespace POE_WPF
         {
             string recipeText = "Recipe:\r\nIngredients:\r\n";
 
-            // Get all ingredients from ingredientDB in mainWindow
             List<Ingredient> ingredients = mainWindow.ingredientDB.GetAllIngredients();
 
             foreach (Ingredient ingredient in ingredients)
@@ -151,7 +144,6 @@ namespace POE_WPF
 
             recipeText += "\r\nSteps:\r\n";
 
-            // Get all steps from ingredientDB in mainWindow
             List<Steps> steps = mainWindow.ingredientDB.GetAllSteps();
 
             int stepNumber = 1;
@@ -162,6 +154,57 @@ namespace POE_WPF
             }
 
             txtDisplay.Text = recipeText;
+        }
+
+        private void btnReset_Click(object sender, RoutedEventArgs e)
+        {
+            string recipeText = "Recipe:\r\nIngredients:\r\n";
+
+            List<Ingredient> ingredients = mainWindow.ingredientDB.GetAllIngredients();
+
+            foreach (Ingredient ingredient in ingredients)
+            {
+                if (ingredient.Quantity == 16 && ingredient.Unit == "teaspoons")
+                {
+                    recipeText += $"1 cup of {ingredient.Name}\r\n";
+                }
+                else
+                {
+                    recipeText += $"{ingredient.Quantity} {ingredient.Unit} of {ingredient.Name} with {ingredient.Calories} calories and is a {ingredient.FoodGroup} product\r\n";
+                }
+            }
+
+            recipeText += "\r\nSteps:\r\n";
+
+            List<Steps> steps = mainWindow.ingredientDB.GetAllSteps();
+
+            int stepNumber = 1;
+            foreach (Steps step in steps)
+            {
+                recipeText += $"Step {stepNumber}:\n {step.Step}\r\n";
+                stepNumber++;
+            }
+
+            txtDisplay.Text = recipeText;
+        }
+
+        private void btnRestart_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to restart?", "Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            if (result == MessageBoxResult.Yes)
+            {
+                mainWindow.NavigateTo(new Page1(mainWindow));
+
+                mainWindow.ingredientDB.ClearIngredients();
+                mainWindow.ingredientDB.ClearSteps();
+
+                txtDisplay.Text = "";
+            }
+        }
+
+        private void btnViewRecipes_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.NavigateTo(new Page6(mainWindow));
         }
     }
 }

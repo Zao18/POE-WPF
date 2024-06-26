@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace POE_WPF
 {
-    /// <summary>
-    /// Interaction logic for Page4.xaml
-    /// </summary>
     public partial class Page4 : Page
     {
         private MainWindow mainWindow;
