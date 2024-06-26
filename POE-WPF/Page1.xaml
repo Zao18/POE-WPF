@@ -9,10 +9,10 @@
       Title="Page1">
 
     <Grid>
-        <StackPanel>
-            <TextBox Name="txtRecipeName" Width="200" Margin="10"/>
-            <TextBox Name="txtNumber" Width="200" Margin="10"/>
-            <Button Name="btnSubmit1" Content="Submit" Click="btnSubmit1_Click" Width="100" Margin="10"/>
-        </StackPanel>
+        <TextBox Name="txtRecipeName" Margin="300,53,252,332"/>
+        <TextBox Name="txtNumber" Margin="300,142,252,256"/>
+        <Button Name="btnSubmit1" Content="Submit" Click="btnSubmit1_Click" Margin="350,238,320,155"/>
+        <Label Content="Name of Recipe:" HorizontalAlignment="Left" Margin="187,63,0,0" VerticalAlignment="Top"/>
+        <Label Content="Number of Dngredients:" HorizontalAlignment="Left" Margin="159,151,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

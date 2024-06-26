@@ -24,38 +24,41 @@ namespace POE_WPF
         public Page5(MainWindow mainWindow)
         {
             InitializeComponent();
-            mainWindow = mainWindow;
+            this.mainWindow = mainWindow;
+            DisplayRecipe();
         }
 
         private void DisplayRecipe()
         {
             string recipeText = "Recipe:\r\nIngredients:\r\n";
 
-            // Get the current recipe from the MainWindow
-            Recipe currentRecipe = mainWindow.CurrentRecipe;
+            // Get all ingredients from ingredientDB in mainWindow
+            List<Ingredient> ingredients = mainWindow.ingredientDB.GetAllIngredients();
 
-            if (currentRecipe != null)
+            foreach (Ingredient ingredient in ingredients)
             {
-                // Display recipe name
-                recipeText += $"{currentRecipe.Name}\r\n\r\n";
-
-                // Display ingredients
-                foreach (var ingredient in currentRecipe.Ingredients)
+                if (ingredient.Quantity == 16 && ingredient.Unit == "teaspoons")
                 {
-                    recipeText += $"{ingredient.Quantity} {ingredient.Unit} of {ingredient.Name}\r\n";
+                    recipeText += $"1 cup of {ingredient.Name}\r\n";
                 }
-
-                // Display steps
-                recipeText += "\r\nSteps:\r\n";
-                int stepNumber = 1;
-                foreach (var step in currentRecipe.Steps)
+                else
                 {
-                    recipeText += $"{stepNumber}. {step.Description}\r\n";
-                    stepNumber++;
+                    recipeText += $"{ingredient.Quantity} {ingredient.Unit} of {ingredient.Name} with {ingredient.Calories} calories and is a {ingredient.FoodGroup} product\r\n";
                 }
             }
 
-            // Display the recipe text in a TextBox or another control
+            recipeText += "\r\nSteps:\r\n";
+
+            // Get all steps from ingredientDB in mainWindow
+            List<Steps> steps = mainWindow.ingredientDB.GetAllSteps();
+
+            int stepNumber = 1;
+            foreach (Steps step in steps)
+            {
+                recipeText += $"Step {stepNumber}:\n {step.Step}\r\n";
+                stepNumber++;
+            }
+
             txtDisplay.Text = recipeText;
         }
     }

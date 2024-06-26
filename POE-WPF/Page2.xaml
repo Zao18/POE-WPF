@@ -9,13 +9,17 @@
       Title="Page2">
 
     <Grid>
-        <StackPanel>
-            <TextBox Name="txtName" Width="200" Margin="10"/>
-            <TextBox Name="txtQuantity" Width="200" Margin="10"/>
-            <TextBox Name="txtUnit" Width="200" Margin="10"/>
-            <TextBox Name="txtCalories" Width="200" Margin="10"/>
-            <ComboBox Name="cbFoodGroup" Width="200" Margin="10"/>
-            <Button Name="btnSubmit2" Content="Submit" Click="btnSubmit2_Click" Width="100" Margin="10"/>
-        </StackPanel>
+
+        <TextBox Name="txtName" Margin="300,8,184,386"/>
+        <TextBox Name="txtQuantity" Margin="300,70,184,329"/>
+        <TextBox Name="txtUnit" Margin="300,127,184,271"/>
+        <TextBox Name="txtCalories" Margin="300,188,184,203"/>
+        <ComboBox Name="cbFoodGroup" Margin="300,252,184,130"/>
+        <Button Name="btnSubmit2" Content="Submit" Click="btnSubmit2_Click" Width="100" Margin="350,334,350,35"/>
+        <Label Content="Name of Ingredient:" HorizontalAlignment="Left" Margin="179,18,0,0" VerticalAlignment="Top"/>
+        <Label Content="Quantity of Ingredient:" HorizontalAlignment="Left" Margin="167,62,0,0" VerticalAlignment="Top"/>
+        <Label Content="Unit of Mesurement:" HorizontalAlignment="Left" Margin="168,112,0,0" VerticalAlignment="Top"/>
+        <Label Content="Number of Calories:" HorizontalAlignment="Left" Margin="171,162,0,0" VerticalAlignment="Top"/>
+        <Label Content="Food Group:" HorizontalAlignment="Left" Margin="202,206,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

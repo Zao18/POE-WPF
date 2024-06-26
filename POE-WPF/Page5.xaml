@@ -9,9 +9,11 @@
       Title="Page5">
 
     <Grid>
-        <StackPanel>
-            <TextBox Name="txtDisplay" IsReadOnly="True"/>
-            <Button Content="Next" Click="btnNextScreen_Click"/>
-        </StackPanel>
+        <TextBox x:Name="txtDisplay" IsReadOnly="True" Margin="237,10,237,192"/>
+        <Button Content="Half" HorizontalAlignment="Left" Margin="63,272,0,0" VerticalAlignment="Top" Height="81" Width="144"/>
+        <Button Content="Double" HorizontalAlignment="Center" Margin="0,272,0,0" VerticalAlignment="Top" Height="81" Width="144"/>
+        <Button Content="Triple" HorizontalAlignment="Left" Margin="612,272,0,0" VerticalAlignment="Top" Height="81" Width="144"/>
+        <Button Content="Reset" HorizontalAlignment="Left" Margin="63,359,0,0" VerticalAlignment="Top" Height="81" Width="144"/>
+        <Button Content="Restart" HorizontalAlignment="Center" Margin="0,359,0,0" VerticalAlignment="Top" Height="81" Width="144"/>
     </Grid>
 </Page>

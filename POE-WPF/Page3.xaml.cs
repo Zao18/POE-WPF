@@ -24,7 +24,7 @@ namespace POE_WPF
         public Page3(MainWindow mainWindow)
         {
             InitializeComponent();
-            mainWindow = mainWindow;
+            this.mainWindow = mainWindow;
         }
 
         private void btnSubmit3_Click(object sender, RoutedEventArgs e)

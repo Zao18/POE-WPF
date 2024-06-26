@@ -24,7 +24,7 @@ namespace POE_WPF
         public Page4(MainWindow mainWindow)
         {
             InitializeComponent();
-            mainWindow = mainWindow;
+            this.mainWindow = mainWindow;
         }
 
         private void btnSubmit4_Click(object sender, RoutedEventArgs e)

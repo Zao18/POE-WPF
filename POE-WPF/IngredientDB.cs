@@ -38,7 +38,7 @@ namespace POE_WPF
             }
 
             //Method retrives the steps
-            public List<Steps> GetAllSteps()
+            internal List<Steps> GetAllSteps()
             {
                 return stepsList.Values.ToList();
             }

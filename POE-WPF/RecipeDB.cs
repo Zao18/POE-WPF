@@ -35,13 +35,13 @@ namespace POE_WPF
             }
 
             //Retrieves all recipes from the list
-            public List<Recipe> GetAllRecipes()
+            internal List<Recipe> GetAllRecipes()
             {
                 return recipes.Values.ToList();
             }
 
             //Retrieves a specific recipe by name
-            public Recipe GetRecipe(string name)
+            internal Recipe GetRecipe(string name)
             {
                 if (recipes.ContainsKey(name)) //(GeeksforGeeks, 2018)
                 {

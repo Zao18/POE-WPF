@@ -9,9 +9,8 @@
       Title="Page3">
 
     <Grid>
-        <StackPanel>
-            <TextBox Name="txtSteps"/>
-            <Button Content="Submit" Click="btnSubmit3_Click"/>
-        </StackPanel>
+            <TextBox Name="txtSteps" Width="200" Margin="300,143,300,250"/>
+            <Button Content="Submit" Click="btnSubmit3_Click" Width="100" Margin="350,253,350,153"/>
+        <Label Content="Number of Steps:" HorizontalAlignment="Left" Margin="193,159,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Page>

@@ -22,6 +22,7 @@ namespace POE_WPF
         public int numOfSteps;
         public int count = 1;
         public double totalCalories = 0;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,6 +32,16 @@ namespace POE_WPF
         public void NavigateTo(Page page)
         {
             MainFrame.Navigate(page);
+        }
+
+        public double TotalCalories(List<Ingredient> ingredients)
+        {
+            double totalCalories = 0;
+            foreach (var ingredient in ingredients)
+            {
+                totalCalories += ingredient.Calories * ingredient.Quantity; // Adjust as per your Ingredient class structure
+            }
+            return totalCalories;
         }
     }
 }

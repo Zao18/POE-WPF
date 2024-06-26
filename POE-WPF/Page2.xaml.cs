@@ -25,6 +25,18 @@ namespace POE_WPF
         {
             InitializeComponent();
             this.mainWindow = mainWindow;
+            PopulateComboBox();
+        }
+
+        private void PopulateComboBox()
+        {
+            cbFoodGroup.Items.Add(new ComboBoxItem { Content = "Fruits" });
+            cbFoodGroup.Items.Add(new ComboBoxItem { Content = "Vegetables" });
+            cbFoodGroup.Items.Add(new ComboBoxItem { Content = "Grains" });
+            cbFoodGroup.Items.Add(new ComboBoxItem { Content = "Protein" });
+            cbFoodGroup.Items.Add(new ComboBoxItem { Content = "Dairy" });
+
+            cbFoodGroup.SelectedIndex = 0; // Set default selected item if needed
         }
 
         private void btnSubmit2_Click(object sender, RoutedEventArgs e)
