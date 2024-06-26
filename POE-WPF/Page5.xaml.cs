@@ -61,5 +61,107 @@ namespace POE_WPF
 
             txtDisplay.Text = recipeText;
         }
+
+        private void btnHalf_Click(object sender, RoutedEventArgs e)
+        {
+            string recipeText = "Recipe:\r\nIngredients:\r\n";
+
+            // Get all ingredients from ingredientDB in mainWindow
+            List<Ingredient> ingredients = mainWindow.ingredientDB.GetAllIngredients();
+
+            foreach (Ingredient ingredient in ingredients)
+            {
+                if (ingredient.Quantity == 16 && ingredient.Unit == "teaspoons")
+                {
+                    recipeText += $"1 cup of {ingredient.Name}\r\n";
+                }
+                else
+                {
+                    recipeText += $"{ingredient.Quantity * 0.5} {ingredient.Unit} of {ingredient.Name} with {ingredient.Calories * 0.5} calories and is a {ingredient.FoodGroup} product\r\n";
+                }
+            }
+
+            recipeText += "\r\nSteps:\r\n";
+
+            // Get all steps from ingredientDB in mainWindow
+            List<Steps> steps = mainWindow.ingredientDB.GetAllSteps();
+
+            int stepNumber = 1;
+            foreach (Steps step in steps)
+            {
+                recipeText += $"Step {stepNumber}:\n {step.Step}\r\n";
+                stepNumber++;
+            }
+
+            txtDisplay.Text = recipeText;
+        }
+
+        private void btnDouble_Click(object sender, RoutedEventArgs e)
+        {
+            string recipeText = "Recipe:\r\nIngredients:\r\n";
+
+            // Get all ingredients from ingredientDB in mainWindow
+            List<Ingredient> ingredients = mainWindow.ingredientDB.GetAllIngredients();
+
+            foreach (Ingredient ingredient in ingredients)
+            {
+                if (ingredient.Quantity == 16 && ingredient.Unit == "teaspoons")
+                {
+                    recipeText += $"1 cup of {ingredient.Name}\r\n";
+                }
+                else
+                {
+                    recipeText += $"{ingredient.Quantity * 2} {ingredient.Unit} of {ingredient.Name} with {ingredient.Calories * 2} calories and is a {ingredient.FoodGroup} product\r\n";
+                }
+            }
+
+            recipeText += "\r\nSteps:\r\n";
+
+            // Get all steps from ingredientDB in mainWindow
+            List<Steps> steps = mainWindow.ingredientDB.GetAllSteps();
+
+            int stepNumber = 1;
+            foreach (Steps step in steps)
+            {
+                recipeText += $"Step {stepNumber}:\n {step.Step}\r\n";
+                stepNumber++;
+            }
+
+            txtDisplay.Text = recipeText;
+        }
+
+        private void btnTriple_Click(object sender, RoutedEventArgs e)
+        {
+            string recipeText = "Recipe:\r\nIngredients:\r\n";
+
+            // Get all ingredients from ingredientDB in mainWindow
+            List<Ingredient> ingredients = mainWindow.ingredientDB.GetAllIngredients();
+
+            foreach (Ingredient ingredient in ingredients)
+            {
+                if (ingredient.Quantity == 16 && ingredient.Unit == "teaspoons")
+                {
+                    recipeText += $"1 cup of {ingredient.Name}\r\n";
+                }
+                else
+                {
+                    recipeText += $"{ingredient.Quantity * 3} {ingredient.Unit} of {ingredient.Name} with {ingredient.Calories * 3} calories and is a {ingredient.FoodGroup} product\r\n";
+                }
+            }
+
+            recipeText += "\r\nSteps:\r\n";
+
+            // Get all steps from ingredientDB in mainWindow
+            List<Steps> steps = mainWindow.ingredientDB.GetAllSteps();
+
+            int stepNumber = 1;
+            foreach (Steps step in steps)
+            {
+                recipeText += $"Step {stepNumber}:\n {step.Step}\r\n";
+                stepNumber++;
+            }
+
+            txtDisplay.Text = recipeText;
+        }
     }
 }
